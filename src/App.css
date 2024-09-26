@@ -1,38 +1,91 @@
-.App {
+*{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #555;
+}
+.calendar{
+  width: 400px;
+  background-color: #e2e1e1;
+  border-radius: 5px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 5px;
+}
+.heading{
   text-align: center;
+  text-decoration: underline;
+  margin-bottom: 2px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover{
+  color: #555;
+}
+select{
+  font-size: 18px;
+  padding: 0px 8px;
+  border: 1px solid #3498db;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+.daysOfWeek{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  background-color: #79beec;
+  color: #fff;
+  margin-bottom: 5px;
+  gap: 8px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.days{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 8px;
+  padding: 5px;
+}
+.day,.empty{
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #acabab;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.empty{
+  background-color: #e2e1e1;
+}
+.day:hover{
+  background-color: #3498db;
+  color: #fff;
+}
+.current{
+  background-color: tomato;
+  color: yellow;
+}
+.sunday{
+  color: red;
 }
